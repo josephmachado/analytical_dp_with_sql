@@ -8,7 +8,7 @@ down:
 trino:
 	docker container exec -it trino-coordinator trino
 
-s3:
+minio:
 	open "http://localhost:9001"
 
 trino-ui:
