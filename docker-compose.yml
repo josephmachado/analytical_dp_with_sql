@@ -54,6 +54,16 @@ services:
     networks:
       - trino-network
 
+  createbuckets:
+    image: minio/mc
+    container_name: createbuckets
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c " /usr/bin/mc config host add myminio http://minio:9000 minio minio123; /usr/bin/mc rm -r --force myminio/tpch myminio/warehouse; /usr/bin/mc mb myminio/tpch myminio/warehouse; /usr/bin/mc policy download myminio/tpch myminio/warehouse; exit 0; "
+    networks:
+      - trino-network
+
 networks:
   trino-network:
     driver: bridge
