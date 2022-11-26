@@ -16,21 +16,19 @@ git clone https://github.com/josephmachado/analytical_dp_with_sql.git
 cd analytical_dp_for_data_engineers
 ```
 
-### Architecture
+### How to run
 
-#### Minio Credentials
-  Username: minio
-  Password: minio123
+#### Minio
+
+Open local `http://localhost:9001` and use username: minio and password: minio123.
 
 #### Trino Credentials
-  Username: any-value-will-work
+Open local `http://localhost:8080` and use username: any-value.
 
 ### Commands
 
 ```shell
 make up # spin up containers
-make s3-alternative # open minio UI in your default browser
-make trino-ui # open Trino UI in your default browser
 make trino # Open trino CLI for writing queries
 make down # spin down containers
 ```
