@@ -41,3 +41,11 @@ When you run the `make trino` command you will enter the Trino CLI.
 q -- To exit view mode, which is activated when you run any select query
 Exit; -- To exit trino
 ```
+
+### ERD
+
+![TPCH ERD](./images/tpch_erd.png)
+
+##### References
+
+1. [TPC](https://www.tpc.org/tpch/)
