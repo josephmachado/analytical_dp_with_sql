@@ -15,6 +15,8 @@ https://github.com/josephmachado/analytical_dp_with_sql.git
 cd analytical_dp_with_sql
 ```
 
+**Note**: If you are using Macbook M1, please follow [the instructions here](https://github.com/josephmachado/analytical_dp_with_sql/issues/4#issuecomment-1426902080) to use the appropriate docker image.
+
 We have some helpful make commands to make working with our systems more accessible. Shown below are the make commands and their definitions
 
 1. make up: Spin up the docker containers.
