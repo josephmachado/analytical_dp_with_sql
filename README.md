@@ -54,6 +54,14 @@ Starting the docker containers will also start Minio(S3 alternative); we will us
 
 **UI**: Open the Trino UI at http://localhost:8080 (username: any word) and Minio (S3 alternative) at http://localhost:9001 (username: minio, password: minio123) in a browser of your choice. 
 
+If you prefer to connect to Trino via a SQL IDE, download [DBeaver](https://dbeaver.io/) (addresses issues [mentioned here](https://github.com/josephmachado/analytical_dp_with_sql/issues/8)). Open `DBeaver`, 
+
+1. Click on Database -> New Database Connection
+2. A `Connect to a database` box will open; search for, select `Trino`, and press Next.
+3. Do not change settings; use user as the user name. You will get a `connected` text box if you test the connection. Click Finish, and you will be able to explore our Trino database.
+
+![DBeaver](./images/dbeaver.png)
+
 # Data Model
 
 The [TPC-H](https://www.tpc.org/tpch/) data represents a car parts seller's data warehouse, where we record orders, items that make up that order (lineitem), supplier, customer, part(parts sold), region, nation, and partsupp.
