@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   trino-coordinator:
-    image: 'trinodb/trino:latest'
+    image: 'trinodb/trino:422'
     hostname: trino-coordinator
     container_name: trino-coordinator
     ports:
@@ -12,7 +12,7 @@ services:
       - trino-network
 
   mariadb:
-    image: 'mariadb:latest'
+    image: 'mariadb:10.3.32'
     hostname: mariadb
     container_name: mariadb
     ports:
@@ -41,7 +41,7 @@ services:
       - trino-network
 
   minio:
-    image: 'minio/minio:latest'
+    image: 'minio/minio:RELEASE.2023-07-21T21-12-44Z'
     hostname: minio
     container_name: minio
     ports:
