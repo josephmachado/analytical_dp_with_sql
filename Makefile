@@ -1,6 +1,11 @@
-up:
+setup-containers:
 	docker volume rm --force minio-data
 	docker compose up -d --build
+
+create-buckets: 
+	docker exec createbucketsbkp python /code/create_buckets.py 
+
+up: setup-containers create-buckets
 
 down:
 	docker compose down

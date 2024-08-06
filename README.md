@@ -30,6 +30,10 @@ In your terminal, do the following:
 ```bash
 # Make sure docker is running using docker ps
 make up # starts the docker containers
+# If you are having issues with existing containers
+# stop them all with the following command
+# docker rm -f $(docker ps -a -q)
+
 sleep 60 # wait 1 minute for all the containers to set up
 make trino # opens the trino cli
 ```

@@ -54,6 +54,16 @@ services:
     networks:
       - trino-network
 
+  createbucketsbkp:
+    image: createbucketsbkp
+    container_name: createbucketsbkp
+    build:
+      context: ./
+      dockerfile: ./containers/setup/Dockerfile
+    networks:
+      - trino-network
+
+
   createbuckets:
     image: minio/mc
     container_name: createbuckets
